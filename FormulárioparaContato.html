@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Contato</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Estilização.css">
+    <script src="js.js"></script>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <header>
+        <hr>
+        <h1 id="FormCon">Girafffas</h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="AtividadesdaOrganização.html">Atividades</a></li>
+                <li><a href="#FormCon" class="telaAtual">Contato</a></li>
+                <li><a href="LocalizaçãodaOrganização.html">Onde Estamos?</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/Contato">Contato</a></li>
+        <li class="breadcrumb-item active">Formulário para Contato</li>
+        </ol>
+    <div id="outField" class="container">
+        <fieldset>
+            <legend>
+                <h2 id="legenda">Formulário para contato</h2>
+            </legend>
+            <form action="Agradecimento.html" method="get" autocomplete="on" name="formulario" id="formulario">
+                <div id="form">
+                    <div>
+                        <label class="form-label" for="nome">Nome:</label>
+                        <input class="form-control-sm" type="text" id="nome" name="nome" autofocus
+                            placeholder="(Obrigatório)">
+                        <span id="spanNome"></span>
+                    </div>
+                    <div>
+                        <label class="form-label" for="telefone">Telefone:</label>
+                        <input class="form-control-sm" type="tel" id="telefone" name="telefone"
+                            placeholder="(Obrigatório)">
+                        <span id="spanTelefone"></span>
+                    </div>
+                    <div>
+                        <label class="form-label" for="email">E-mail:</label>
+                        <input class="form-control-sm" type="email" id="email" name="email" placeholder="(Obrigatório)">
+                        <span id="spanEmail"></span>
+                    </div>
+                    <br>
+                    <div>
+                        Por acaso você possui um interesse maior em alguma(s) causa(s) mais específica(s)?
+                    </div>
+                    <div>
+                        <input type="checkbox" id="Causa1" name="Causa1" value="Trabalho de campo">
+                        <label for="Causa1">Trabalho de campo</label>
+                        <input type="checkbox" id="Causa2" name="Causa2" value="Monitoria">
+                        <label for="Causa2">Monitoria</label>
+                        <input type="checkbox" id="Causa3" name="Causa3" value="Capacitação médica/treinamento">
+                        <label for="Causa3">Capacitação médica/treinamento</label>
+                        <input type="checkbox" id="Causa4" name="Causa4" value="Divulgação">
+                        <label for="Causa4">Divulgação</label>
+                    </div>
+                    <br>
+                    <div>
+                        Está nos contactando de qual região?
+                    </div>
+                    <div>
+                        <select name="continentes" id="continentes">
+                            <option value="AL">América do Sul/Central</option>
+                            <option value="AN">América do Norte</option>
+                            <option value="EU">Europa</option>
+                            <option value="AF" selected>África</option>
+                            <option value="AS">Ásia</option>
+                            <option value="OC">Oceania</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        Você deseja apoiar nossa ONG de alguma maneira?
+                    </div>
+                    <div name="apoio" id="apoio">
+                        <input type="radio" name="ajuda" id="ajV" value="Sim, como voluntário">Sim, como voluntário<br>
+                        <input type="radio" name="ajuda" id="ajD" value="Sim, como doador">Sim, como doador<br>
+                        <input type="radio" name="ajuda" id="ntI" value="Não tenho interesse">Não tenho interesse<br>
+                    </div>
+                    <span id="spanApoio"></span><br>
+                    <br>
+                    <div>
+                        Por favor, nos informe o motivo do seu contato
+                    </div>
+                    <div>
+                        <textarea id="texto" name="texto" rows="10" cols="100"
+                            placeholder="(Obrigatório)"></textarea><br>
+                        <span id="spanTexto"></span>
+                    </div>
+                    <br>
+                    <button class="botoes2" type="button" onclick="validar()">Validar</button>
+                </div>
+                <div class="modal fade" id="modal-mensagem">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+                                <h4 class="modal-title">Dados</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="dados1"></div>
+                                <div id="dados2"></div>
+                                <div id="dados3"></div>
+                                <div id="dados4"></div>
+                                <div id="dados5"></div>
+                                <div id="dados6"></div>
+                                <div id="dados7"></div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="botoes2" type="reset" id="botaoReset" onclick="resetar();" data-dismiss="modal">Reiniciar</button>
+                                <button class="botoes2" type="button" id="botaoAlterar" data-dismiss="modal">Alterar</button>
+                                <button class="botoes2" type="submit" id="botaoEnviar">Enviar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="jumbotron">
+                    <u>ATENÇÃO</u>: Menores de idade não podem se integrar como ativistas de campo!
+                </div>
+            </form>
+        </fieldset>
+    </div>
+    <br>
+    <hr>
+    <footer>Girafffas - Organização não governamental de apoio às girafas - 2022</footer>
+</body>
+
+</html>

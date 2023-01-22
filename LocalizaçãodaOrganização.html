@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localização da Organização</title>
+    <link rel="stylesheet" href="Estilização.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("img").hover(function () {
+                $(this).animate({
+                    width: "670px",
+                    height: "510px"
+                });
+
+            },
+                function () {
+                    $(this).animate({
+                        width: "640px",
+                        height: "480px"
+                    });
+                });
+
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <hr>
+        <h1 id="LocOrg">Girafffas</h1>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Principal</a></li>
+                <li><a href="AtividadesdaOrganização.html">Atividades</a></li>
+                <li><a href="FormulárioparaContato.html">Contato</a></li>
+                <li><a href="#LocOrg" class="telaAtual">Onde Estamos?</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <h1 class="sub">Venha nos conhecer!</h1>
+    <div class="sub">
+        Nós, do Giraffas, possuímos nossa sede no Central Park (em português: Parque Central) que se trata do grande e
+        famoso parque dentro da cidade de Nova Iorque. Possui uma
+        área de 3,41 km² e está localizado no distrito de Manhattan. Foi o primeiro parque público nos Estados
+        Unidos, inaugurado em 1857 com 3,15 km², e é considerado, por muitos nova-iorquinos, um oásis dentro da
+        grande floresta de arranha-céus existente na região. É um lugar onde as pessoas podem diminuir o ritmo frenético
+        de Nova Iorque
+    </div>
+    <br>
+    <div class="txtImg">
+        <div>
+            <figure>
+                <img src="CentralPark.jpg" alt="Central Park">
+                <figcaption>Vista média de nossos visitantes</figcaption>
+            </figure>
+        </div>
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.127098125726!2d-73.96870248459292!3d40.78121987932449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2sCentral%20Park!5e0!3m2!1spt-BR!2sbr!4v1669221615669!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <footer>Girafffas - Organização não governamental de apoio às girafas - 2022</footer>
+</body>
+
+</html>
